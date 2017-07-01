@@ -86,11 +86,12 @@ public class PrimeFinder{
                 }
                 if (prime){
                     primes[numFound++] = curr;
-		    if (lc++ < 15) {
+		    if (lc < 14) {
 			System.out.print(curr + " ");
+			lc++;
 		    } else {
-			System.out.print("\n" + curr + " ");
-			lc = 1;
+			System.out.print(curr + "\n");
+			lc = 0;
 		    }
                 }
                 curr++;
