@@ -43,7 +43,7 @@ while (found < find):
     prime = True
     irt = isqrt(curr)
 
-    for x in xrange(0, found):
+    for x in range(0, found):
         if (primes[x] > irt):
             break
         elif (curr % primes[x] == 0):
@@ -54,8 +54,9 @@ while (found < find):
         found += 1
         lc += 1
         if (lc < 15):
-            print str(curr),
+            sys.stdout.write(str(curr) + " ")
         else:
-            lc = 1
-            print str(curr)
+            lc = 0
+            sys.stdout.write(str(curr) + "\n")
     curr += 1
+print()
